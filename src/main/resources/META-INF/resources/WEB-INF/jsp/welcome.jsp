@@ -48,6 +48,7 @@
     <div class="welcome-box">
         <h1>Welcome, ${username}</h1>
         <p>We are glad to have you here.</p>
+        <div><a href="list-todos">Manage</a> your todos.</div>
     </div>
 </body>
 </html>
