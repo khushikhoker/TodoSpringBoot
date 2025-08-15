@@ -64,8 +64,9 @@
     </style>
 </head>
 <body>
+    <pre>${errorMessage}</pre>
     <div class="login-container">
-        <h2>Login</h2>
+        <h2>Welcome to Login Page</h2>
         <form action="/login" method="POST">
             <label for="username">Username</label>
             <input type="text" id="username" name="username" required>
