@@ -3,6 +3,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<link href="webjars/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet" >
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>${username} To-Do List</title>
@@ -130,31 +131,35 @@
 </head>
 <body>
 
-    <h1>${username}'s To-Do List</h1>
-    <div class="subtitle">Your tasks and progress at a glance</div>
+    <div class="container">
+<h1>${username}'s To-Do List</h1>
+        <div class="subtitle">Your tasks and progress at a glance</div>
 
-    <div class="todo-card">
-        <table>
-            <thead>
-                <tr>
-                    <th>ID</th>
-                    <th>Description</th>
-                    <th>Target Date</th>
-                    <th>Status</th>
-                </tr>
-            </thead>
-            <tbody>
-                <c:forEach items="${todos}" var="todo">
+        <div class="todo-card">
+            <table class="table">
+                <thead>
                     <tr>
-                        <td>${todo.id}</td>
-                        <td>${todo.description}</td>
-                        <td>${todo.targetDate}</td>
-                        <td>${todo.done}</td>
+                        <th>ID</th>
+                        <th>Description</th>
+                        <th>Target Date</th>
+                        <th>Status</th>
                     </tr>
-                </c:forEach>
-            </tbody>
-        </table>
+                </thead>
+                <tbody>
+                    <c:forEach items="${todos}" var="todo">
+                        <tr>
+                            <td>${todo.id}</td>
+                            <td>${todo.description}</td>
+                            <td>${todo.targetDate}</td>
+                            <td>${todo.done}</td>
+                        </tr>
+                    </c:forEach>
+                </tbody>
+            </table>
+        </div>
     </div>
 
+<script src="webjars/bootstrap/5.1.3/js/bootstrap.min.js"></script>
+      <script src="webjars/jquery/3.6.0/jquery.min.js"></script>
 </body>
 </html>
